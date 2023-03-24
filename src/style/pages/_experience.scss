@@ -1,0 +1,32 @@
+.experience {
+  text-align: center;
+  height: calc(70vh - 12rem);
+
+  &_title {
+    text-transform: uppercase;
+    padding: 4rem;
+  }
+
+  &_last {
+    width: 80%;
+    margin: auto;
+    font-size: 1.5rem;
+    padding: 2rem;
+    border-radius: 20px;
+
+    &-border--blue {
+      @include border(--light-blue);
+    }
+    &-border--red {
+      @include border(--light-red);
+    }
+
+    &-title {
+      margin-bottom: 4rem;
+    }
+  }
+
+  &_other {
+    margin-top: 8rem;
+  }
+}

@@ -7,7 +7,12 @@ import HomeComponent from "./HomeComponent";
 function MainContent() {
   const { state } = useLocation();
 
-  const { theme, language } = state;
+  let { theme, language } = state || {};
+
+  if (state === null) {
+    theme = "dark";
+    language = "eng";
+  }
 
   return (
     <main className={`${theme === "light" ? "light-mode" : "dark-mode"} home`}>

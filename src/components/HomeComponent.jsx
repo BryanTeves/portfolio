@@ -9,7 +9,12 @@ function HomeComponent({ eng, ptbr, side, param, text, img, alt }) {
 
   const { state } = useLocation();
 
-  const { theme: actualTheme, language: actualLangue } = state;
+  let { theme: actualTheme, language: actualLangue } = state || {};
+
+  if (state === null) {
+    actualTheme = "dark";
+    actualLangue = "eng";
+  }
 
   const handleClick = function () {
     Navigate(param, { state: { theme: actualTheme, language: actualLangue } });

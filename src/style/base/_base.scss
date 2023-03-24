@@ -121,3 +121,7 @@ ul {
     opacity: 1;
   }
 }
+
+@mixin border($var) {
+  border: 5px solid var($var);
+}

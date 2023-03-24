@@ -3,7 +3,7 @@ import { useRef, useState, useEffect } from "react";
 import { BsArrowRight, BsArrowLeft } from "react-icons/bs";
 import { HiSun, HiMoon } from "react-icons/hi";
 
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 
 function Intro() {
   const divREF = useRef();

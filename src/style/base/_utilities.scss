@@ -215,3 +215,19 @@
 .text-shadow--dark {
   text-shadow: 0 0rem 15px var(--basic-black);
 }
+
+.text-border-bottom--light {
+  border-bottom: 1px solid var(--basic-white);
+}
+
+.text-border-bottom--dark {
+  border-bottom: 1px solid var(--basic-black);
+}
+
+.page-title {
+  text-transform: uppercase;
+  height: 12rem;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}

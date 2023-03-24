@@ -1,0 +1,32 @@
+.knowledges {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+
+  grid-template-rows: repeat(3, 42rem) 16rem;
+
+  font-size: 1.5rem;
+
+  & h2 {
+    text-transform: uppercase;
+  }
+
+  &-images {
+    height: 12rem;
+    width: 80%;
+    margin-top: 1rem;
+    border-radius: 20px;
+    display: flex;
+  }
+
+  &-border--blue {
+    @include border(--light-blue);
+  }
+
+  &-border--red {
+    @include border(--light-red);
+  }
+
+  &_other {
+  }
+}

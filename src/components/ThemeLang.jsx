@@ -9,7 +9,12 @@ import { HiSun, HiMoon } from "react-icons/hi";
 function ThemeLang() {
   const { state } = useLocation();
 
-  let { theme, language } = state;
+  let { theme, language } = state || {};
+
+  if (state === null) {
+    theme = "dark";
+    language = "eng";
+  }
 
   const Navigate = useNavigate();
 

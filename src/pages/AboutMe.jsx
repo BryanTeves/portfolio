@@ -9,7 +9,12 @@ import { AiOutlineMail, AiFillLinkedin, AiFillGithub } from "react-icons/ai";
 function AboutMe() {
   const { state } = useLocation();
 
-  const { theme, language } = state;
+  let { theme, language } = state || {};
+
+  if (state === null) {
+    theme = "dark";
+    language = "eng";
+  }
 
   const date = new Date();
   const born = new Date(2002, 1, 22);

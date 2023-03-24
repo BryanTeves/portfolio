@@ -7,7 +7,12 @@ import { IoMdArrowDropdown } from "react-icons/io";
 function DropdownBTN() {
   const { state } = useLocation();
 
-  const { theme } = state;
+  let { theme, language } = state || {};
+
+  if (state === null) {
+    theme = "dark";
+    language = "eng";
+  }
 
   const handleClick = function () {
     const value = window.innerHeight;

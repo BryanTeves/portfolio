@@ -1,0 +1,17 @@
+.work {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+
+  grid-template-rows: 10rem 8rem;
+
+  &-title {
+    & p {
+      margin: 2rem 0;
+    }
+  }
+
+  &-description {
+    padding: 0 16rem;
+  }
+}
