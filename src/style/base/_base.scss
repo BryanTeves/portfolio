@@ -1,0 +1,123 @@
+:root {
+  --dark-gray: rgb(38, 38, 38);
+  --light-gray: rgb(88, 88, 88);
+
+  --light-blue: rgb(39, 159, 180);
+  --light-blue-transparent: rgba(39, 159, 180, 0.4);
+
+  --light-red: rgb(223, 43, 43);
+  --light-red-transparent: rgba(223, 43, 43, 0.4);
+
+  --basic-white: white;
+  --basic-black: black;
+}
+
+html {
+  font-size: 62.5%; // 10px
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+a,
+:link {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+@mixin neon-btn() {
+  text-shadow: 0px 0px 0.25rem currentColor;
+  position: relative;
+  transition: all 0.2s linear;
+  font-size: 1.5rem;
+  border-radius: 1.5rem;
+}
+
+@mixin center() {
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 0.8rem;
+  font-size: 1.4rem;
+}
+
+@mixin after-ground-btn() {
+  opacity: 0;
+  content: "";
+  position: absolute;
+  bottom: 130%;
+  right: -10%;
+  width: 120%;
+  height: 100%;
+  transform: perspective(5em) rotateX(40deg);
+  filter: blur(4px);
+  transition: all 1s linear;
+}
+
+@mixin before-ground-btn() {
+  opacity: 0;
+  content: "";
+  position: absolute;
+  top: 120%;
+  right: -10%;
+  width: 120%;
+  height: 100%;
+  transform: perspective(7em) rotateX(80deg);
+  transition: all 1s linear;
+}
+
+@mixin intro-btn() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  width: 15rem;
+}
+
+@mixin after-left-btn() {
+  opacity: 0;
+  content: "";
+  position: absolute;
+  right: 110%;
+  width: 10%;
+  height: 120%;
+  transform: perspective(5em) rotateY(-40deg);
+  filter: blur(4px);
+  transition: all 1s linear;
+}
+
+@mixin rotate-animation($value) {
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  margin: auto;
+  animation: rotate 3s linear infinite $value;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--dark-gray);
+}
+
+@mixin show-border() {
+  &::after {
+    visibility: visible;
+    opacity: 1;
+  }
+}

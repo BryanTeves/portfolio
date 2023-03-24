@@ -1,0 +1,21 @@
+.dropdown {
+  &_div {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 70vh - 12rem);
+
+    @include show-border();
+
+    font-size: 12rem;
+  }
+
+  &-btn {
+    border: none;
+
+    &:hover {
+      box-shadow: none;
+      cursor: pointer;
+    }
+  }
+}

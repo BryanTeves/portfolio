@@ -1,0 +1,23 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "name": "color-generator",
+      "github": "https://github.com/BryanTeves/color-generator",
+      "site": "https://colorgenerator-bryan-teves.netlify.app/",
+      "img": "../images/color-generator.jpg",
+      "description": "I have made this project to test my JavaScript skills. I used only JS, without any framework. The main function of the color generator, like the name says, is to generate colors, beside that, you can put your own color and even copy the RGB code from the colors",
+      "descricao": "Eu fiz esse projeto com a intenção de testar as minhas habilidades em JavaScript. Eu usei apenas JS, sem nenhum framewok. O principal objetivo do color generator, como o próprio nome diz, é gerar cores, além disso, você consegue colocar suas próprias cores e também copiar o código RGB delas"
+    },
+
+    {
+      "id": 2,
+      "name": "league-wiki",
+      "github": "https://github.com/BryanTeves/league-wiki",
+      "site": "https://lol-wiki-bryan-teves.netlify.app/",
+      "img": "/src/images/league-wiki.jpg",
+      "description": "This was my first React project. When I finished my course, I realized that React is so GREAT to work with. With that in mind, I mixed up one of my passions with another of my passions, games and program, so I thought \"Why not make a League of legends wiki?\", and it's how this project came alive. The main concept of the league-wiki is to bring all the infos of some champion. I used React, Sass and the RIOT API to bring this project out of paper",
+      "descricao": ""
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+.theme-lang {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 8rem;
+  height: 12rem;
+  position: relative;
+
+  @include show-border();
+
+  &-div {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+}

@@ -1,0 +1,44 @@
+.home {
+  display: grid;
+  grid-template-rows: 16rem repeat(3, 48rem);
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 2rem;
+
+  font-size: 1.4rem;
+
+  letter-spacing: 5px;
+  overflow: hidden;
+
+  &-title {
+    text-transform: uppercase;
+    align-items: center;
+  }
+
+  &_info {
+    grid-column: 1 / 6;
+    padding: 0 8rem;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &_component {
+    padding: 8rem;
+    transition: all 1.2s cubic-bezier(0, 1.06, 1, 0.41);
+
+    &--text-left {
+      position: absolute;
+      width: 40%;
+      top: 50%;
+      right: 0;
+      text-align: center;
+    }
+    &--text-right {
+      position: absolute;
+      width: 40%;
+      top: 50%;
+      left: 0;
+      text-align: center;
+    }
+  }
+}

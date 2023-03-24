@@ -1,0 +1,162 @@
+.intro {
+  @include center();
+  z-index: -10;
+
+  &_main {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-rows: repeat(20, 1fr);
+
+    &-btn {
+      &::after {
+        @include after-ground-btn();
+      }
+
+      &::before {
+        @include before-ground-btn();
+      }
+
+      &:hover::after,
+      &:hover::before {
+        opacity: 1;
+      }
+    }
+
+    &_continue {
+      position: absolute;
+      right: 4%;
+      transition: all 1s linear;
+
+      &-btn {
+        @include intro-btn();
+
+        &::after {
+          @include after-left-btn();
+        }
+
+        &:hover::after {
+          opacity: 1;
+        }
+      }
+
+      &-icon {
+        margin-top: 0.3rem;
+      }
+    }
+
+    &-title {
+      grid-row: 8 / 8;
+    }
+
+    &_list {
+      grid-row: 12 / 12;
+
+      &-ul {
+        display: flex;
+        justify-content: space-around;
+      }
+    }
+  }
+}
+
+.sub-intro {
+  @include center();
+  z-index: 100;
+  transform: translate(100%, -100%);
+
+  &_go-back {
+    position: absolute;
+    left: 4%;
+
+    &-btn {
+      @include intro-btn();
+
+      &::after {
+        opacity: 0;
+        content: "";
+        position: absolute;
+        bottom: -10%;
+        left: 110%;
+        width: 10%;
+        height: 120%;
+        transform: perspective(5em) rotateY(40deg);
+        filter: blur(4px);
+        transition: all 1s linear;
+      }
+
+      &:hover::after {
+        opacity: 1;
+      }
+    }
+    &-icon {
+      margin-top: 0.3rem;
+    }
+  }
+
+  &_main {
+    display: grid;
+    height: inherit;
+    grid-template-rows: repeat(20, 1fr);
+
+    &-title {
+      grid-row: 8 / 8;
+    }
+
+    &-list {
+      grid-row: 12 / 12;
+
+      &-icon {
+        position: absolute;
+        left: 115%;
+        bottom: 25%;
+      }
+
+      &-btn {
+        &::after {
+          @include after-ground-btn();
+        }
+
+        &::before {
+          @include before-ground-btn();
+        }
+
+        &:hover::after,
+        &:hover::before {
+          opacity: 1;
+        }
+      }
+
+      &-ul {
+        display: flex;
+        justify-content: space-around;
+      }
+    }
+  }
+
+  &_continue {
+    position: absolute;
+    right: 4%;
+
+    &-btn {
+      @include intro-btn();
+
+      &::after {
+        @include after-left-btn();
+      }
+
+      &:hover::after {
+        opacity: 1;
+      }
+    }
+
+    &-icon {
+      margin-top: 0.3rem;
+    }
+  }
+}
+
+.intro-carousel {
+  height: 100vh;
+  overflow: hidden;
+}
