@@ -8,6 +8,7 @@ import { useLocation } from "react-router-dom";
 import { useContext, useEffect, useState } from "react";
 
 import ProjectsContext from "../context/ProjectsContext";
+import Footer from "../components/Footer";
 
 function Projects() {
   const { state } = useLocation();
@@ -31,14 +32,6 @@ function Projects() {
     };
     fetchData();
   }, []);
-
-  console.log(typeof project);
-
-  if (project === undefined) {
-    console.log("ola");
-  }
-
-  project.map((a) => console.log(a));
 
   return (
     <>
@@ -109,6 +102,7 @@ function Projects() {
           ))}
         </div>
       )}
+      <Footer />
     </>
   );
 }

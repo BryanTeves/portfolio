@@ -1,0 +1,16 @@
+.footer {
+  height: 14rem;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 0;
+  font-size: 1.5rem;
+  text-align: center;
+
+  &-border--light {
+    border-top: 2px solid var(--basic-black);
+  }
+  &-border--dark {
+    border-top: 2px solid var(--basic-white);
+  }
+}

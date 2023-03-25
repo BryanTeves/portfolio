@@ -6,6 +6,7 @@ import MainContent from "../components/MainContent";
 import DropdownBTN from "../components/DropdownBTN";
 
 import { useEffect, useState, useRef } from "react";
+import Footer from "../components/Footer";
 
 function Home() {
   const observeREF = useRef();
@@ -33,6 +34,7 @@ function Home() {
         <DropdownBTN />
       </div>
       <MainContent />
+      <Footer />
     </>
   );
 }

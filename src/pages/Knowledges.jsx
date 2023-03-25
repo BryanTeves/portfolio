@@ -3,6 +3,7 @@ import React from "react";
 import ThemeLang from "../components/ThemeLang";
 import { useLocation } from "react-router-dom";
 import PageTitle from "../components/PageTitle";
+import Footer from "../components/Footer";
 
 function Knowledges() {
   const { state } = useLocation();
@@ -73,6 +74,7 @@ function Knowledges() {
           </p>
         </div>
       </div>
+      <Footer />
     </>
   );
 }
