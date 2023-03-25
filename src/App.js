@@ -9,6 +9,10 @@ import Projects from "./pages/Projects";
 import Knowledges from "./pages/Knowledges";
 import Experience from "./pages/Experience";
 
+// https://images.pexels.com/photos/4439901/pexels-photo-4439901.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1
+// https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1
+// https://images.pexels.com/photos/1029757/pexels-photo-1029757.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1
+
 function App() {
   return (
     <ProjectsProvider>

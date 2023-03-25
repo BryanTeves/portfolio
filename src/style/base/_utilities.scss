@@ -243,3 +243,7 @@
     color: var(--light-red);
   }
 }
+
+.blur {
+  filter: blur(20px);
+}

@@ -52,7 +52,17 @@ function HomeComponent({ eng, ptbr, side, param, text, img, alt }) {
         <p>{text}</p>
       </div>
 
-      <img src={img} alt={alt} />
+      <div
+        className={`home_component-image home_component-image--${side} home_component-image--border-${
+          actualTheme === "light" ? "red" : "blue"
+        }`}
+      >
+        <img
+          src={img}
+          alt={alt}
+          className={`home_component-image--img ${visible ? "" : "blur"}`}
+        />
+      </div>
     </div>
   );
 }

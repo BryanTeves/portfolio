@@ -9,7 +9,7 @@
     margin: auto;
     font-size: 1.5rem;
     padding: 2rem;
-    border-radius: 20px;
+    @include border-radius-basic();
 
     &-border--blue {
       @include border(--light-blue);

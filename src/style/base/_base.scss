@@ -125,3 +125,7 @@ ul {
 @mixin border($var) {
   border: 5px solid var($var);
 }
+
+@mixin border-radius-basic() {
+  border-radius: 20px;
+}

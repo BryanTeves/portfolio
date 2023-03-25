@@ -24,7 +24,8 @@
     }
 
     &-image {
-      border-radius: 20px;
+      @include border-radius-basic();
+
       width: 80%;
       margin: auto;
       &-border--blue {
