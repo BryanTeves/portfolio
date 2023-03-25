@@ -4,6 +4,8 @@ import { AiFillLinkedin, AiFillGithub, AiOutlineMail } from "react-icons/ai";
 
 import { useLocation } from "react-router-dom";
 
+import CV from "../docs/bryan-teves-cv.pdf";
+
 function Header() {
   const { state } = useLocation();
 
@@ -87,6 +89,16 @@ function Header() {
               ? "Dica: Você pode clicar nas bolinhas, elas são links :D"
               : "Tip: You can click on the float icons, they are links :D"}
           </p>
+
+          <button
+            className={`btn btn_neon--light-${
+              theme === "light" ? "red" : "blue"
+            }`}
+          >
+            <a href={CV} download="bryan-cv.pdf">
+              {language === "br" ? "Baixar currículo" : "Download CV"}
+            </a>
+          </button>
         </div>
       </div>
     </header>
