@@ -231,3 +231,15 @@
   align-items: center;
   justify-content: center;
 }
+
+.hover-dark {
+  &:hover {
+    color: var(--light-blue);
+  }
+}
+
+.hover-light {
+  &:hover {
+    color: var(--light-red);
+  }
+}

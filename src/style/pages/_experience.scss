@@ -1,11 +1,8 @@
 .experience {
   text-align: center;
   height: calc(70vh - 12rem);
-
-  &_title {
-    text-transform: uppercase;
-    padding: 4rem;
-  }
+  padding: 8rem;
+  box-sizing: border-box;
 
   &_last {
     width: 80%;

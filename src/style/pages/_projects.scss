@@ -1,0 +1,44 @@
+.projects {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+
+  &_main {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-rows: 14rem 36rem 10rem 24rem;
+    text-align: center;
+    font-size: 1.5rem;
+    letter-spacing: 0.3rem;
+
+    & a {
+      display: inline-block;
+      margin: 2rem;
+      transition: all 0.2s;
+    }
+
+    &-title {
+      text-transform: uppercase;
+    }
+
+    &-image {
+      border-radius: 20px;
+      width: 80%;
+      margin: auto;
+      &-border--blue {
+        @include border(--light-blue);
+      }
+      &-border--red {
+        @include border(--light-red);
+      }
+    }
+
+    &-description {
+      width: 60vw;
+    }
+
+    &-social {
+    }
+  }
+}

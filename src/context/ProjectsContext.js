@@ -4,7 +4,7 @@ const ProjectsContext = createContext();
 
 export const ProjectsProvider = function ({ children }) {
   const projects = async (id) => {
-    const dataFetched = await fetch(`http://localhost:5000/projects/${id}`);
+    const dataFetched = await fetch(`http://localhost:5000/projects`);
 
     const project = await dataFetched.json();
 
