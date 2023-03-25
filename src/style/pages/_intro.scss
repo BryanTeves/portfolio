@@ -1,6 +1,5 @@
 .intro {
   @include center();
-  z-index: -10;
 
   &_main {
     display: grid;
@@ -62,8 +61,7 @@
 
 .sub-intro {
   @include center();
-  z-index: 100;
-  transform: translate(100%, -100%);
+  position: relative;
 
   &_go-back {
     position: absolute;
@@ -157,6 +155,9 @@
 }
 
 .intro-carousel {
-  height: 100vh;
-  overflow: hidden;
+  display: flex;
+  width: 200vw;
+  position: fixed;
+
+  transition: all 1s;
 }

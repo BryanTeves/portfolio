@@ -3,7 +3,7 @@ import { useRef, useState, useEffect } from "react";
 import { BsArrowRight, BsArrowLeft } from "react-icons/bs";
 import { HiSun, HiMoon } from "react-icons/hi";
 
-import { useNavigate, useLocation } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 function Intro() {
   const divREF = useRef();
@@ -21,6 +21,8 @@ function Intro() {
   const [actualTheme, setActualTheme] = useState("dark");
 
   const [startSite, setStartSite] = useState("");
+
+  const [carousel, setCarousel] = useState();
 
   const Navigate = useNavigate();
 
@@ -47,24 +49,24 @@ function Intro() {
     }
   };
 
-  const carouselREF = useRef();
+  const carousselTranslateGO = {
+    transform: `translateX(-50%)`,
+  };
+
+  const carousselTranslateBACK = {
+    transform: `translateX(0%)`,
+  };
 
   const goRight = function () {
-    const right = (carouselREF.current.scrollLeft +=
-      carouselREF.current.offsetWidth);
-
-    return right;
+    setCarousel(carousselTranslateGO);
   };
 
   const goLeft = function () {
-    const left = (carouselREF.current.scrollLeft -=
-      carouselREF.current.offsetWidth);
-
-    return left;
+    setCarousel(carousselTranslateBACK);
   };
 
   return (
-    <div className="intro-carousel" ref={carouselREF}>
+    <div className="intro-carousel" style={carousel}>
       <div className="intro">
         <div
           className={`intro_main ${visible ? "show" : "hidden"} ${
@@ -207,7 +209,7 @@ function Intro() {
                       : "btn_neon--light-blue"
                   } sub-intro_main-list-btn`}
                   data-btn="dark"
-                  tabIndex={4}
+                  tabIndex={3}
                 >
                   <HiMoon className="icon icon-moon sub-intro_main-list-icon" />
 
@@ -225,7 +227,7 @@ function Intro() {
                       : "btn_neon--light-blue"
                   } sub-intro_main-list-btn`}
                   data-btn="light"
-                  tabIndex={3}
+                  tabIndex={4}
                 >
                   <HiSun className="icon icon-moon sub-intro_main-list-icon" />
 
