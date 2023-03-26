@@ -247,3 +247,13 @@
 .blur {
   filter: blur(20px);
 }
+
+.img-left--radius {
+  border-bottom-left-radius: 15px;
+  border-top-left-radius: 15px;
+}
+
+.img-right--radius {
+  border-bottom-right-radius: 15px;
+  border-top-right-radius: 15px;
+}

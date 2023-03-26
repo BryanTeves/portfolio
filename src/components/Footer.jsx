@@ -24,7 +24,7 @@ function Footer() {
         <p className={`text-shadow--${theme === "light" ? "dark" : "light"}`}>
           {language === "br"
             ? "Este site foi feito inteiramente por mim, desde o design até as funcionalidade. Sinta-se a vontade para usar o que desejar, mas lembre-se de dar os devidos créditos."
-            : "This website was made entirely by myself, from desing to functionalities. Feel free to copy anything that you want, just remember to give me the credits."}
+            : "This website was made entirely by myself, from design to functionalities. Feel free to copy anything that you want, just remember to give me the credits."}
         </p>
       </div>
       <div className="footer_copyright">
