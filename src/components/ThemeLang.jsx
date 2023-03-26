@@ -21,18 +21,22 @@ function ThemeLang() {
   const handleClick = function (e) {
     const { btn } = e.target.dataset;
 
-    if (btn === "language" && language == "br") {
+    if (btn === "language" && language === "br") {
       Navigate("", { state: { theme: theme, language: "eng" } });
-    } else if (btn === "language" && language == "eng") {
+    } else if (btn === "language" && language === "eng") {
       Navigate("", { state: { theme: theme, language: "br" } });
-    } else if (btn === "theme" && theme == "dark") {
+    } else if (btn === "theme" && theme === "dark") {
       Navigate("", { state: { theme: "light", language: language } });
-    } else if (btn === "theme" && theme == "light") {
+    } else if (btn === "theme" && theme === "light") {
       Navigate("", { state: { theme: "dark", language: language } });
+    } else if (btn === "home") {
+      Navigate("/home", { state: { theme: theme, language: language } });
     } else {
       return;
     }
   };
+
+  const location = useLocation();
 
   return (
     <div
@@ -47,7 +51,7 @@ function ThemeLang() {
         />
         <button
           data-btn="language"
-          className={`btn btn_neon--light-${theme == "dark" ? "blue" : "red"}`}
+          className={`btn btn_neon--light-${theme === "dark" ? "blue" : "red"}`}
         >
           {language === "br" ? "Alterar o idioma" : "Change the language"}
         </button>
@@ -57,6 +61,20 @@ function ThemeLang() {
           }`}
         />
       </div>
+      {location.pathname !== "/home" ? (
+        <div className="theme-lang-div">
+          <button
+            data-btn="home"
+            className={`btn btn_neon--light-${
+              theme === "dark" ? "blue" : "red"
+            } theme-lang-div--home`}
+          >
+            Home
+          </button>
+        </div>
+      ) : (
+        ""
+      )}
       <div className="theme-lang-div">
         <HiMoon
           className={`icon ${
@@ -65,7 +83,7 @@ function ThemeLang() {
         />
         <button
           data-btn="theme"
-          className={`btn btn_neon--light-${theme == "dark" ? "blue" : "red"}`}
+          className={`btn btn_neon--light-${theme === "dark" ? "blue" : "red"}`}
         >
           {language === "br" ? "Mudar o tema" : "Change theme"}
         </button>
