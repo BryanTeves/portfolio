@@ -61,7 +61,12 @@ function Projects() {
                 }`}
                 key={i + 3}
               >
-                <img src={project.img} alt={project.name} key={i + 4} />
+                <img
+                  src={project.img}
+                  alt={project.name}
+                  key={i + 4}
+                  className="projects_main-image--img"
+                />
               </div>
               <div className="projects_main-description" key={i + 5}>
                 <p key={i + 6}>
