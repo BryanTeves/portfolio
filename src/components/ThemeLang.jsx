@@ -73,7 +73,7 @@ function ThemeLang() {
           </button>
         </div>
       ) : (
-        ""
+        <span className="theme-lang-div"></span>
       )}
       <div className="theme-lang-div">
         <HiMoon

@@ -5,11 +5,10 @@ import { useLocation } from "react-router-dom";
 function PageTitle({ title }) {
   const { state } = useLocation();
 
-  let { theme, language } = state || {};
+  let { theme } = state || {};
 
   if (state === null) {
     theme = "dark";
-    language = "eng";
   }
 
   return (

@@ -66,7 +66,7 @@ function Knowledges() {
         </div>
 
         <div className="knowledges_intermediary">
-          <h1>{language == "br" ? "Intermediário" : "Intermediary"}</h1>
+          <h1>{language === "br" ? "Intermediário" : "Intermediary"}</h1>
 
           <h2>C | C# | NodeJS | SQL</h2>
 
@@ -99,7 +99,7 @@ function Knowledges() {
         </div>
 
         <div className="knowledges_basic">
-          <h1>{language == "br" ? "Básico" : "Basic"}</h1>
+          <h1>{language === "br" ? "Básico" : "Basic"}</h1>
 
           <h2>Python</h2>
 

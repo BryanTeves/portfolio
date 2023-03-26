@@ -82,9 +82,9 @@ function Intro() {
             <h1>
               <span
                 className={`${
-                  actualLangue === "br" && actualTheme == "dark"
+                  actualLangue === "br" && actualTheme === "dark"
                     ? "chosen-dark"
-                    : actualLangue === "br" && actualTheme == "light"
+                    : actualLangue === "br" && actualTheme === "light"
                     ? "chosen-light"
                     : ""
                 }`}
@@ -94,9 +94,9 @@ function Intro() {
               |{" "}
               <span
                 className={`${
-                  actualLangue === "eng" && actualTheme == "dark"
+                  actualLangue === "eng" && actualTheme === "dark"
                     ? "chosen-dark"
-                    : actualLangue === "eng" && actualTheme == "light"
+                    : actualLangue === "eng" && actualTheme === "light"
                     ? "chosen-light"
                     : ""
                 }`}
