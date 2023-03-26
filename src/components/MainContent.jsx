@@ -4,6 +4,10 @@ import { useLocation } from "react-router-dom";
 
 import HomeComponent from "./HomeComponent";
 
+import projectsIMG from "../images/projects.webp";
+import knowledgesIMG from "../images/knowledges.webp";
+import experienceIMG from "../images/experience.webp";
+
 function MainContent() {
   const { state } = useLocation();
 
@@ -40,9 +44,7 @@ function MainContent() {
             ? "Confira meus projetos desde que eu comecei no mundo da programação!"
             : "Take a look at my projects since I started in the programming world"
         }`}
-        img={
-          "https://images.pexels.com/photos/1029757/pexels-photo-1029757.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-        }
+        img={projectsIMG}
         alt={"projects"}
       />
 
@@ -56,9 +58,7 @@ function MainContent() {
             ? "Aqui você pode conhecer um pouco sobre o que eu sei e o que estou aprendendo"
             : "Here you can know more about what I know and what I'm learning"
         }`}
-        img={
-          "https://images.pexels.com/photos/4439901/pexels-photo-4439901.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-        }
+        img={knowledgesIMG}
         alt={"knowledges"}
       />
 
@@ -72,9 +72,7 @@ function MainContent() {
             ? "Todas as experiências profissionais que tive estão aqui, aproveite para deixar esta aba maior me fazendo uma proposta :)"
             : "All my professional experienses are here, be welcome to make this section bigger :)"
         }`}
-        img={
-          "https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-        }
+        img={experienceIMG}
         alt={"experience"}
       />
     </main>
