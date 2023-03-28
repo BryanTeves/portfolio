@@ -25,6 +25,7 @@ function Home() {
 
     observer.observe(observeREF.current);
   }, []);
+  // This observer is used to make some animations
 
   return (
     <>

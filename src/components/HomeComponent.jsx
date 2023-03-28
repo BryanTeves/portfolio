@@ -8,10 +8,12 @@ function HomeComponent({ eng, ptbr, side, param, text, img, alt }) {
   const Navigate = useNavigate();
 
   const { state } = useLocation();
+  // This state contain the actual theme and language of that page
 
   let { theme: actualTheme, language: actualLangue } = state || {};
+  // I used other names because when using Navigate it would get confusing and would propbably give some bugs
 
-  if (state === null) {
+  if (!state) {
     actualTheme = "dark";
     actualLangue = "eng";
   }
@@ -19,6 +21,7 @@ function HomeComponent({ eng, ptbr, side, param, text, img, alt }) {
   const handleClick = function () {
     Navigate(param, { state: { theme: actualTheme, language: actualLangue } });
   };
+  // This function make the user navigate to another site URL
 
   const [visible, setVisible] = useState();
 
@@ -31,6 +34,7 @@ function HomeComponent({ eng, ptbr, side, param, text, img, alt }) {
 
     observer.observe(divREF.current);
   }, []);
+  // This observer is used to make some animations
 
   return (
     <div

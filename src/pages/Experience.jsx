@@ -9,10 +9,11 @@ import Footer from "../components/Footer";
 
 function Experience() {
   const { state } = useLocation();
+  // This state contain the actual theme and language of that page
 
   let { theme, language } = state || {};
 
-  if (state === null) {
+  if (!state) {
     theme = "dark";
     language = "eng";
   }

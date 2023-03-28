@@ -4,10 +4,11 @@ import { useLocation } from "react-router-dom";
 
 function Works({ jobTitle, jobStart, jobEnd, jobDescription }) {
   const { state } = useLocation();
+  // This state contain the actual theme and language of that page
 
   let { theme } = state || {};
 
-  if (state === null) {
+  if (!state) {
     theme = "dark";
   }
 

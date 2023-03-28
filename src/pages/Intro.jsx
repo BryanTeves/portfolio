@@ -16,13 +16,17 @@ function Intro() {
 
     observer.observe(divREF.current);
   }, [divREF]);
+  // This observer is used to make some animations
 
   const [actualLangue, setActualLanguage] = useState();
   const [actualTheme, setActualTheme] = useState("dark");
+  // These states are used to change the theme and the language
 
   const [startSite, setStartSite] = useState("");
+  // This state is used to start the intro transition to the home page
 
   const [carousel, setCarousel] = useState();
+  // This state is used to make the carousel work
 
   const Navigate = useNavigate();
 
@@ -43,11 +47,12 @@ function Intro() {
         Navigate("/home", {
           state: { theme: actualTheme, language: actualLangue },
         });
-      }, 1600); // need to be this time because it matches with the animation time
+      }, 1600); // Need to be this time because it matches with the animation time
     } else {
       return;
     }
   };
+  // This block of code change the theme, language and make the user go to the home page
 
   const carousselTranslateGO = {
     transform: `translateX(-50%)`,
@@ -57,13 +62,17 @@ function Intro() {
     transform: `translateX(0%)`,
   };
 
+  // Tehe variables are used to save the translate option to the carousel
+
   const goRight = function () {
     setCarousel(carousselTranslateGO);
   };
+  // Make the carousel go right
 
   const goLeft = function () {
     setCarousel(carousselTranslateBACK);
   };
+  // Make the carousel go left
 
   return (
     <div className="intro-carousel" style={carousel}>

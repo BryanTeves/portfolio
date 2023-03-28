@@ -12,10 +12,11 @@ import Footer from "../components/Footer";
 
 function Projects() {
   const { state } = useLocation();
+  // This state contain the actual theme and language of that page
 
   let { theme, language } = state || {};
 
-  if (state === null) {
+  if (!state) {
     theme = "dark";
     language = "eng";
   }
@@ -32,6 +33,8 @@ function Projects() {
     };
     fetchData();
   }, []);
+
+  // This useEffect is needed to fetch the projects data
 
   return (
     <>

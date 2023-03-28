@@ -3,12 +3,10 @@ import { createContext } from "react";
 const ProjectsContext = createContext();
 
 export const ProjectsProvider = function ({ children }) {
-  const projects = async (id) => {
+  const projects = async () => {
     const dataFetched = await fetch(`http://localhost:5000/projects`);
 
     const project = await dataFetched.json();
-
-    console.log(project);
 
     return project;
   };

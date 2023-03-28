@@ -6,10 +6,11 @@ import { IoMdArrowDropdown } from "react-icons/io";
 
 function DropdownBTN() {
   const { state } = useLocation();
+  // This state contain the actual theme and language of that page
 
   let { theme } = state || {};
 
-  if (state === null) {
+  if (!state) {
     theme = "dark";
   }
 
@@ -18,6 +19,7 @@ function DropdownBTN() {
 
     window.scrollTo(0, value);
   };
+  // This function change the current position of the site
 
   return (
     <div

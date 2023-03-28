@@ -8,10 +8,11 @@ import { HiSun, HiMoon } from "react-icons/hi";
 
 function ThemeLang() {
   const { state } = useLocation();
+  // This state contain the actual theme and language of that page
 
   let { theme, language } = state || {};
 
-  if (state === null) {
+  if (!state) {
     theme = "dark";
     language = "eng";
   }
@@ -35,8 +36,10 @@ function ThemeLang() {
       return;
     }
   };
+  // This block of code make the page change the color or the language
 
   const location = useLocation();
+  // This const is used to verify if the user is in the home page, to show or not the home button
 
   return (
     <div

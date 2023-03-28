@@ -10,10 +10,11 @@ import experienceIMG from "../images/experience.webp";
 
 function MainContent() {
   const { state } = useLocation();
+  // This state contain the actual theme and language of that page
 
   let { theme, language } = state || {};
 
-  if (state === null) {
+  if (!state) {
     theme = "dark";
     language = "eng";
   }
@@ -42,7 +43,7 @@ function MainContent() {
         text={`${
           language === "br"
             ? "Confira meus projetos desde que eu comecei no mundo da programação!"
-            : "Take a look at my projects since I started in the programming world"
+            : "Take a look at my projects since I started in the programming world!"
         }`}
         img={projectsIMG}
         alt={"projects"}
@@ -55,8 +56,8 @@ function MainContent() {
         param={"/knowledges"}
         text={`${
           language === "br"
-            ? "Aqui você pode conhecer um pouco sobre o que eu sei e o que estou aprendendo"
-            : "Here you can know more about what I know and what I'm learning"
+            ? "Aqui você pode conhecer um pouco sobre o que eu sei e o que estou aprendendo."
+            : "Here you can know more about what I know and what I'm learning."
         }`}
         img={knowledgesIMG}
         alt={"knowledges"}
