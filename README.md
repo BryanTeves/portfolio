@@ -1,70 +1,33 @@
-# Getting Started with Create React App
+# Este é meu portfólio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Toda a ideia foi feita por mim, desde o design até as funcionalidade
 
-## Available Scripts
+### Estrutura do código
 
-In the project directory, you can run:
+Utilizei React juntamente de SASS para fazer todo o site. Utilizei a biblioteca json-server para armazenar todos os projetos que fiz, o motivo principal da qual a utilizei foi para manutenção futura, uma vez que alterando poucas linhas eu já consigo atualizar a página de projetos como um todo.
 
-### `npm start`
+### Design
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Para o design, eu pensei em fazer algo simples, mas que ficasse tanto do meu agrando quanto do usuário. Pensando nisso, eu fiz a função de modo escuro e modo claro, aonde o usuário é capaz de escolher o modo que prefere.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Idioma
 
-### `npm test`
+Como eu sou nativo brasileiro e tenho um inglês praticamente fluente, decidi deixar a opção do usuário escolher também o idioma que o melhor agrada, tendo em vista que o público para o porfólio possa ser não apenas de brasileiros, decidi tentar englobar a maior quantidade possível de pessoas.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<hr>
 
-### `npm run build`
+# This is my porfolio
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### All the idea was made by me, from design to functionality
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Code structure
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+I used React together with SASS to make the whole site. I used the json-server library to store all my projects datas, didi it with the main objective in maintenance, since once I change just a few lines, I can update the whole projects page all at once.
 
-### `npm run eject`
+### Design
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Speaking of desing, I thought of doing something simple, but at the same time good to me and the user. With that idea in mind, I created the dark and light mode function, where the user can choose the theme he likes the most.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Language
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Since I'm brazilian native and speak english practically fluent, I decided to let the user choose the language that he prefers, since the portfolio's main target audience may no be only brazilian, so I thought it will be better to try to cover all people.
