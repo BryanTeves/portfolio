@@ -169,10 +169,12 @@
 
 @keyframes rotate {
   0% {
-    transform: rotate(0deg) translate(-150px) rotate(0deg);
+    transform: rotate(0deg) translate(var(--animation-translate-px))
+      rotate(0deg);
   }
   100% {
-    transform: rotate(360deg) translate(-150px) rotate(-360deg);
+    transform: rotate(360deg) translate(var(--animation-translate-px))
+      rotate(-360deg);
   }
 }
 
@@ -180,12 +182,22 @@
   grid-column: 1 / 5;
   text-align: left;
   transform: translate(0);
+
+  @media only screen and (max-width: $large-size) {
+    grid-column: 1 / -1;
+    text-align: center;
+  }
 }
 
 .right {
   grid-column: 6 / 2;
   text-align: right;
   transform: translate(0);
+
+  @media only screen and (max-width: $large-size) {
+    grid-column: 1 / -1;
+    text-align: center;
+  }
 }
 
 .border-light {
@@ -251,4 +263,12 @@
 .img-right--radius {
   border-bottom-right-radius: 15px;
   border-top-right-radius: 15px;
+}
+
+.box-shadow--blue {
+  box-shadow: 0 0 40px var(--light-blue);
+}
+
+.box-shadow--red {
+  box-shadow: 0 0 40px var(--light-red);
 }

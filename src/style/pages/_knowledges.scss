@@ -1,9 +1,16 @@
 .knowledges {
   display: grid;
-  justify-content: center;
-  align-items: center;
 
   grid-template-rows: repeat(3, 46rem) 16rem;
+  grid-template-columns: 2fr 3fr 2fr;
+
+  @media only screen and (max-width: $big-size) {
+    grid-template-columns: 2fr 5fr 2fr;
+  }
+
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 
   font-size: 1.5rem;
 
@@ -11,8 +18,21 @@
     text-transform: uppercase;
   }
 
+  &_advanced {
+    grid-column: 2 / 3;
+  }
+
+  &_intermediary {
+    grid-column: 2 / 3;
+  }
+
+  &_basic {
+    grid-column: 2 / 3;
+  }
+
   &-images {
     @include border-radius-basic();
+
     height: 16rem;
     margin-top: 1rem;
     display: flex;
@@ -41,5 +61,7 @@
   }
 
   &_other {
+    text-align: center;
+    grid-column: 2 / 3;
   }
 }

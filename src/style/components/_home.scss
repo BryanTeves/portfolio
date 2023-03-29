@@ -1,6 +1,9 @@
 .home {
   display: grid;
   grid-template-rows: 16rem repeat(3, 48rem);
+  @media only screen and (max-width: $large-size) {
+    grid-template-rows: 16rem repeat(3, 60rem);
+  }
   grid-template-columns: repeat(5, 1fr);
   grid-gap: 2rem;
 
@@ -26,20 +29,45 @@
     padding: 8rem;
     transition: all 1.2s cubic-bezier(0, 1.06, 1, 0.41);
     margin-bottom: 2rem;
+    @media only screen and (max-width: $large-size) {
+      display: grid;
+      justify-content: center;
+      align-items: center;
+      grid-template-rows: 30rem 10rem 6rem;
+      grid-template-columns: 1fr;
+      grid-gap: 2rem;
 
-    &--text-left {
-      position: absolute;
-      width: 40%;
-      top: 50%;
-      right: 0;
-      text-align: center;
+      padding: 2rem;
     }
-    &--text-right {
-      position: absolute;
-      width: 40%;
-      top: 50%;
-      left: 0;
-      text-align: center;
+
+    &--text {
+      @media only screen and (max-width: $large-size) {
+        position: inherit;
+        grid-row: 2 / 3;
+      }
+
+      &-left {
+        position: absolute;
+        width: 30%;
+        top: 50%;
+        right: 0;
+        text-align: center;
+        @media only screen and (max-width: $large-size) {
+          position: inherit;
+          width: 100%;
+        }
+      }
+      &-right {
+        position: absolute;
+        width: 30%;
+        top: 50%;
+        left: 0;
+        text-align: center;
+        @media only screen and (max-width: $large-size) {
+          position: inherit;
+          width: 100%;
+        }
+      }
     }
 
     &-image {
@@ -48,6 +76,13 @@
       width: 50rem;
       transition: all 2s linear;
 
+      @media only screen and (max-width: $large-size) {
+        position: inherit;
+        grid-row: 1 / 2;
+        text-align: center;
+        margin: auto;
+      }
+
       @include border-radius-basic();
 
       &--img {
@@ -55,14 +90,17 @@
         width: 100%;
         transition: all 2s linear;
         @include border-radius-basic();
+
+        @media only screen and (max-width: $large-size) {
+        }
       }
 
       &--right {
-        right: 20%;
+        right: 24%;
       }
 
       &--left {
-        left: 20%;
+        left: 24%;
       }
 
       &--border-blue {

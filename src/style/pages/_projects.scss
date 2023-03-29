@@ -7,7 +7,13 @@
     display: grid;
     justify-content: center;
     align-items: center;
-    grid-template-rows: 14rem 36rem 10rem 24rem;
+    grid-template-rows: 14rem 36rem 24rem 28rem;
+
+    @media only screen and (max-width: $big-size) {
+      grid-template-rows: 14rem 24rem 26rem 28rem;
+      grid-template-columns: 1fr;
+    }
+
     text-align: center;
     font-size: 1.5rem;
     letter-spacing: 0.3rem;
@@ -45,7 +51,7 @@
 
     &-description {
       margin-top: 2rem;
-      width: 60vw;
+      width: 60dvw;
     }
 
     &-social {

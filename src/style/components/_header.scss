@@ -1,6 +1,10 @@
 .header {
-  height: 70vh;
+  height: 70dvh;
   position: relative;
+
+  @media only screen and (max-width: $large-size) {
+    height: 90dvh;
+  }
 
   @include show-border();
 
@@ -9,6 +13,11 @@
     display: grid;
     grid-template-columns: 2fr 4fr;
     height: 100%;
+
+    @media only screen and (max-width: $large-size) {
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 2fr;
+    }
 
     // I founded the rotate animation in some website (sad I have no clue who made it D=), I just changed some lines and added other 2 spheres to rotate together
     &-photo {
@@ -21,6 +30,12 @@
       background-size: cover;
       background-position: center;
 
+      @media only screen and (max-width: $large-size) {
+        width: 20rem;
+        height: 20rem;
+        margin-top: 4rem;
+      }
+
       &:hover &--email,
       &:hover &--linkedin,
       &:hover &--github {
@@ -29,14 +44,30 @@
 
       &--email {
         @include rotate-animation(0s);
+        @media only screen and (max-width: $large-size) {
+          animation-play-state: paused;
+          position: absolute;
+          top: 130%;
+        }
       }
 
       &--linkedin {
         @include rotate-animation(1s);
+        @media only screen and (max-width: $large-size) {
+          animation-play-state: paused;
+          position: absolute;
+          top: 130%;
+          left: 110%;
+        }
       }
 
       &--github {
         @include rotate-animation(2s);
+        @media only screen and (max-width: $large-size) {
+          animation-play-state: paused;
+          position: absolute;
+          top: 130%;
+        }
       }
     }
 
@@ -46,6 +77,9 @@
       font-size: 1.5rem;
       text-align: center;
       letter-spacing: 0.4rem;
+      @media only screen and (max-width: $large-size) {
+        margin-top: 6rem;
+      }
 
       & p:not(:last-child) {
         margin-bottom: 4rem;

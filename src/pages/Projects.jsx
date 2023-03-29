@@ -60,7 +60,9 @@ function Projects() {
               </div>
               <div
                 className={`projects_main-image projects_main-image-border--${
-                  theme === "light" ? "red" : "blue"
+                  theme === "light"
+                    ? "red box-shadow--red"
+                    : "blue box-shadow--blue"
                 }`}
                 key={i + 3}
               >

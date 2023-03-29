@@ -43,22 +43,26 @@ function HomeComponent({ eng, ptbr, side, param, text, img, alt }) {
       } ${!visible ? `go-${side}` : side}`}
       ref={divREF}
     >
-      <button
-        className={`btn btn_neon--light-${
-          actualTheme === "light" ? "red" : "blue"
-        }`}
-        onClick={handleClick}
-      >
-        {actualLangue === "br" ? ptbr : eng}
-      </button>
+      <div>
+        <button
+          className={`btn btn_neon--light-${
+            actualTheme === "light" ? "red" : "blue"
+          }`}
+          onClick={handleClick}
+        >
+          {actualLangue === "br" ? ptbr : eng}
+        </button>
+      </div>
 
-      <div className={`home_component--text-${side}`}>
+      <div className={`home_component--text home_component--text-${side}`}>
         <p>{text}</p>
       </div>
 
       <div
         className={`home_component-image home_component-image--${side} home_component-image--border-${
-          actualTheme === "light" ? "red" : "blue"
+          actualTheme === "light"
+            ? "red box-shadow--red"
+            : "blue box-shadow--blue"
         }`}
       >
         <img

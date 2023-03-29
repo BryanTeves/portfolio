@@ -54,7 +54,9 @@ function ThemeLang() {
         />
         <button
           data-btn="language"
-          className={`btn btn_neon--light-${theme === "dark" ? "blue" : "red"}`}
+          className={`theme-lang-div--btn btn btn_neon--light-${
+            theme === "dark" ? "blue" : "red"
+          }`}
         >
           {language === "br" ? "Alterar o idioma" : "Change the language"}
         </button>
@@ -68,7 +70,7 @@ function ThemeLang() {
         <div className="theme-lang-div">
           <button
             data-btn="home"
-            className={`btn btn_neon--light-${
+            className={` btn btn_neon--light-${
               theme === "dark" ? "blue" : "red"
             } theme-lang-div--home`}
           >
@@ -86,7 +88,9 @@ function ThemeLang() {
         />
         <button
           data-btn="theme"
-          className={`btn btn_neon--light-${theme === "dark" ? "blue" : "red"}`}
+          className={`theme-lang-div--btn btn btn_neon--light-${
+            theme === "dark" ? "blue" : "red"
+          }`}
         >
           {language === "br" ? "Mudar o tema" : "Change theme"}
         </button>

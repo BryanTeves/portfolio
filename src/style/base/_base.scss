@@ -1,3 +1,7 @@
+$largest-size: 103.125em; //1650px
+$large-size: 75em; //1200px
+$big-size: 56.25em; //900px
+
 :root {
   --dark-gray: rgb(38, 38, 38);
   --light-gray: rgb(88, 88, 88);
@@ -12,10 +16,20 @@
 
   --basic-white: white;
   --basic-black: black;
+
+  --animation-translate-px: -150px;
+
+  @media only screen and (max-width: $largest-size) {
+    --animation-translate-px: -120px;
+  }
 }
 
 html {
   font-size: 62.5%; // 10px
+
+  @media only screen and (max-width: $largest-size) {
+    font-size: 50%;
+  }
 }
 
 *,

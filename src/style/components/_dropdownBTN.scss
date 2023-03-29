@@ -5,6 +5,12 @@
     justify-content: center;
     height: calc(100vh - 70vh - 12rem);
 
+    @media only screen and (max-width: $large-size) {
+      display: none;
+      visibility: hidden;
+      opacity: 0;
+    }
+
     @include show-border();
 
     font-size: 12rem;
