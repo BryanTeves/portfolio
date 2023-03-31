@@ -27,6 +27,12 @@
       right: 4%;
       transition: all 1s linear;
 
+      @media only screen and (max-width: $big-size) {
+        bottom: 15%;
+        right: 50%;
+        transform: translateX(50%);
+      }
+
       &-btn {
         @include intro-btn();
 
@@ -46,6 +52,10 @@
 
     &-title {
       grid-row: 8 / 8;
+
+      @media only screen and (max-width: $medium-size) {
+        padding: 0 4rem;
+      }
     }
 
     &_list {
@@ -66,6 +76,12 @@
   &_go-back {
     position: absolute;
     left: 4%;
+
+    @media only screen and (max-width: $big-size) {
+      top: 10%;
+      left: 50%;
+      transform: translateX(-50%);
+    }
 
     &-btn {
       @include intro-btn();
@@ -99,6 +115,9 @@
 
     &-title {
       grid-row: 8 / 8;
+      @media only screen and (max-width: $medium-size) {
+        padding: 0 4rem;
+      }
     }
 
     &-list {
@@ -135,6 +154,12 @@
   &_continue {
     position: absolute;
     right: 4%;
+
+    @media only screen and (max-width: $big-size) {
+      bottom: 15%;
+      right: 50%;
+      transform: translateX(50%);
+    }
 
     &-btn {
       @include intro-btn();

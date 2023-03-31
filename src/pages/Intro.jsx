@@ -164,10 +164,9 @@ function Intro() {
                 }`}
                 tabIndex={3}
               >
-                <div>{actualLangue === "br" ? "Continuar" : "Continue"}</div>
-                <div>
-                  <BsArrowRight className="intro_main_continue-icon icon" />
-                </div>
+                {actualLangue === "br" ? "Continuar" : "Continue"}
+
+                <BsArrowRight className="intro_main_continue-icon icon" />
               </button>
             </div>
           </div>
@@ -189,10 +188,9 @@ function Intro() {
             onClick={goLeft}
             tabIndex={5}
           >
-            <div>
-              <BsArrowLeft className="icon sub-intro_go-back-icon" />
-            </div>
-            <div>{actualLangue === "br" ? "Voltar" : "Go back"}</div>
+            <BsArrowLeft className="icon sub-intro_go-back-icon" />
+
+            {actualLangue === "br" ? "Voltar" : "Go back"}
           </button>
         </div>
         <div

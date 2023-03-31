@@ -2,9 +2,12 @@ import React from "react";
 
 import { useLocation, useNavigate } from "react-router-dom";
 
+import { useState, useRef } from "react";
+
 import { GiBrazilFlag } from "react-icons/gi";
 import { FaFlagUsa } from "react-icons/fa";
 import { HiSun, HiMoon } from "react-icons/hi";
+import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 
 function ThemeLang() {
   const { state } = useLocation();
@@ -32,75 +35,186 @@ function ThemeLang() {
       Navigate("", { state: { theme: "dark", language: language } });
     } else if (btn === "home") {
       Navigate("/home", { state: { theme: theme, language: language } });
-    } else {
-      return;
-    }
+    } else if (btn === "menu-open") {
+      console.log("testando");
+      setShowMenu(true);
+      console.log(showMenu);
+    } else if (btn === "menu-close") {
+      setShowMenu(false);
+    } else return;
   };
   // This block of code make the page change the color or the language
 
   const location = useLocation();
   // This const is used to verify if the user is in the home page, to show or not the home button
 
+  // const phoneSize = window.matchMedia("(max-width: 50em)").matches; // 50em == 800px
+
+  const actualWidth = window.screen.width;
+
+  const [size, setSize] = useState(actualWidth);
+
+  window.addEventListener("resize", function () {
+    let a = this.window.screen.width;
+    setSize(a);
+  });
+
+  const [showMenu, setShowMenu] = useState(false);
+
   return (
-    <div
-      className={`${theme === "light" ? "light-mode" : "dark-mode"} theme-lang`}
-      onClick={handleClick}
-    >
-      <div className="theme-lang-div">
-        <GiBrazilFlag
-          className={`icon ${
-            language === "eng" ? "hidden-basic-2" : "show-basic-2"
-          }`}
-        />
-        <button
-          data-btn="language"
-          className={`theme-lang-div--btn btn btn_neon--light-${
-            theme === "dark" ? "blue" : "red"
-          }`}
-        >
-          {language === "br" ? "Alterar o idioma" : "Change the language"}
-        </button>
-        <FaFlagUsa
-          className={`icon ${
-            language === "br" ? "hidden-basic-2" : "show-basic-2"
-          }`}
-        />
-      </div>
-      {location.pathname !== "/home" ? (
-        <div className="theme-lang-div">
-          <button
-            data-btn="home"
-            className={` btn btn_neon--light-${
-              theme === "dark" ? "blue" : "red"
-            } theme-lang-div--home`}
+    <>
+      {size <= 800 ? (
+        <>
+          <div
+            className={`${
+              theme === "light"
+                ? "light-mode box-shadow--red"
+                : "dark-mode box-shadow--blue"
+            } ${showMenu ? "no-show" : ""} theme-lang_menu`}
+            onClick={handleClick}
+            data-btn="menu-open"
           >
-            Home
-          </button>
-        </div>
+            <AiOutlineMenu className="icon" data-btn="menu-open" />
+          </div>
+          <div
+            className={`${!showMenu ? "no-show" : "theme-lang_menu-options"} ${
+              theme === "light" ? "light-mode" : "dark-mode"
+            }`}
+          >
+            <div
+              className={`${
+                theme === "light"
+                  ? "light-mode box-shadow--red"
+                  : "dark-mode box-shadow--blue"
+              } ${!showMenu ? "no-show" : ""} theme-lang_menu`}
+              onClick={handleClick}
+              data-btn="menu-close"
+            >
+              <AiOutlineClose className="icon" data-btn="menu-close" />
+            </div>
+            {location.pathname !== "/home" ? (
+              <div
+                className="theme-lang_menu-options--div"
+                onClick={handleClick}
+              >
+                <button
+                  data-btn="home"
+                  className={` btn btn_neon--light-${
+                    theme === "dark" ? "blue" : "red"
+                  } theme-lang-div--home`}
+                >
+                  Home
+                </button>
+              </div>
+            ) : (
+              <span className="no-show"></span>
+            )}
+            <div className="theme-lang_menu-options--div" onClick={handleClick}>
+              <GiBrazilFlag
+                className={`icon ${
+                  language === "eng" ? "hidden-basic-2" : "show-basic-2"
+                }`}
+              />
+              <button
+                data-btn="language"
+                className={`theme-lang-div--btn btn btn_neon--light-${
+                  theme === "dark" ? "blue" : "red"
+                }`}
+              >
+                {language === "br" ? "Alterar o idioma" : "Change the language"}
+              </button>
+              <FaFlagUsa
+                className={`icon ${
+                  language === "br" ? "hidden-basic-2" : "show-basic-2"
+                }`}
+              />
+            </div>
+            <div className="theme-lang_menu-options--div" onClick={handleClick}>
+              <HiMoon
+                className={`icon ${
+                  theme === "light" ? "hidden-basic-2" : "show-basic-2"
+                }`}
+              />
+              <button
+                data-btn="theme"
+                className={`theme-lang-div--btn btn btn_neon--light-${
+                  theme === "dark" ? "blue" : "red"
+                }`}
+              >
+                {language === "br" ? "Mudar o tema" : "Change theme"}
+              </button>
+              <HiSun
+                className={`icon ${
+                  theme === "dark" ? "hidden-basic-2" : "show-basic-2"
+                }`}
+              />
+            </div>
+          </div>
+        </>
       ) : (
-        <span className="theme-lang-div"></span>
-      )}
-      <div className="theme-lang-div">
-        <HiMoon
-          className={`icon ${
-            theme === "light" ? "hidden-basic-2" : "show-basic-2"
-          }`}
-        />
-        <button
-          data-btn="theme"
-          className={`theme-lang-div--btn btn btn_neon--light-${
-            theme === "dark" ? "blue" : "red"
-          }`}
+        <div
+          className={`${
+            theme === "light" ? "light-mode" : "dark-mode"
+          } theme-lang`}
+          onClick={handleClick}
         >
-          {language === "br" ? "Mudar o tema" : "Change theme"}
-        </button>
-        <HiSun
-          className={`icon ${
-            theme === "dark" ? "hidden-basic-2" : "show-basic-2"
-          }`}
-        />
-      </div>
-    </div>
+          <div className="theme-lang-div">
+            <GiBrazilFlag
+              className={`icon ${
+                language === "eng" ? "hidden-basic-2" : "show-basic-2"
+              }`}
+            />
+            <button
+              data-btn="language"
+              className={`theme-lang-div--btn btn btn_neon--light-${
+                theme === "dark" ? "blue" : "red"
+              }`}
+            >
+              {language === "br" ? "Alterar o idioma" : "Change the language"}
+            </button>
+            <FaFlagUsa
+              className={`icon ${
+                language === "br" ? "hidden-basic-2" : "show-basic-2"
+              }`}
+            />
+          </div>
+          {location.pathname !== "/home" ? (
+            <div className="theme-lang-div">
+              <button
+                data-btn="home"
+                className={` btn btn_neon--light-${
+                  theme === "dark" ? "blue" : "red"
+                } theme-lang-div--home`}
+              >
+                Home
+              </button>
+            </div>
+          ) : (
+            <span className="theme-lang-div"></span>
+          )}
+          <div className="theme-lang-div">
+            <HiMoon
+              className={`icon ${
+                theme === "light" ? "hidden-basic-2" : "show-basic-2"
+              }`}
+            />
+            <button
+              data-btn="theme"
+              className={`theme-lang-div--btn btn btn_neon--light-${
+                theme === "dark" ? "blue" : "red"
+              }`}
+            >
+              {language === "br" ? "Mudar o tema" : "Change theme"}
+            </button>
+            <HiSun
+              className={`icon ${
+                theme === "dark" ? "hidden-basic-2" : "show-basic-2"
+              }`}
+            />
+          </div>
+        </div>
+      )}
+    </>
   );
 }
 
