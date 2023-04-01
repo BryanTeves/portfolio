@@ -24,6 +24,9 @@ function ThemeLang() {
 
   const handleClick = function (e) {
     const { btn } = e.target.dataset;
+    const btnSVG = e.currentTarget.dataset.btn;
+    // This variable is used because SVG has some problems to handle click with target
+    // Is better to handle click in SVG when using currentTarget
 
     if (btn === "language" && language === "br") {
       Navigate("", { state: { theme: theme, language: "eng" } });
@@ -35,11 +38,9 @@ function ThemeLang() {
       Navigate("", { state: { theme: "dark", language: language } });
     } else if (btn === "home") {
       Navigate("/home", { state: { theme: theme, language: language } });
-    } else if (btn === "menu-open") {
-      console.log("testando");
+    } else if (btnSVG === "menu-open") {
       setShowMenu(true);
-      console.log(showMenu);
-    } else if (btn === "menu-close") {
+    } else if (btnSVG === "menu-close") {
       setShowMenu(false);
     } else return;
   };
@@ -50,12 +51,12 @@ function ThemeLang() {
 
   // const phoneSize = window.matchMedia("(max-width: 50em)").matches; // 50em == 800px
 
-  const actualWidth = window.screen.width;
+  const actualWidth = window.innerWidth;
 
   const [size, setSize] = useState(actualWidth);
 
   window.addEventListener("resize", function () {
-    let resizedWidth = this.window.screen.width;
+    let resizedWidth = this.window.innerWidth;
     setSize(resizedWidth);
   });
 
@@ -154,6 +155,17 @@ function ThemeLang() {
               />
             </div>
           </div>
+          {showMenu ? (
+            <div
+              className="overlay"
+              data-btn="menu-close"
+              onClick={handleClick}
+            >
+              oi
+            </div>
+          ) : (
+            <span className="no-show"></span>
+          )}
         </>
       ) : (
         <div

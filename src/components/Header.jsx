@@ -34,41 +34,43 @@ function Header() {
     >
       <div className="header_main">
         <div className="header_main-photo">
-          <div
-            className={`header_main-photo--email btn_neon--light-${
-              theme === "light" ? "red" : "blue"
-            }`}
-          >
-            <a href="mailto:bryanteves2013@hotmail.com?subject=Gostei do seu portfolio!">
-              <AiOutlineMail className="icon" />
-            </a>
-          </div>
-          <div
-            className={`header_main-photo--linkedin btn_neon--light-${
-              theme === "light" ? "red" : "blue"
-            }`}
-          >
-            <a
-              href="https://www.linkedin.com/in/bryan-teves-freitas-6674ba233/"
-              target={"_blank"}
-              rel="noreferrer"
+          <ul>
+            <li
+              className={`header_main-photo--email btn_neon--light-${
+                theme === "light" ? "red" : "blue"
+              }`}
             >
-              <AiFillLinkedin className="icon" />
-            </a>
-          </div>
-          <div
-            className={`header_main-photo--github btn_neon--light-${
-              theme === "light" ? "red" : "blue"
-            }`}
-          >
-            <a
-              href="https://github.com/BryanTeves"
-              target={"_blank"}
-              rel="noreferrer"
+              <a href="mailto:bryanteves2013@hotmail.com?subject=Gostei do seu portfolio!">
+                <AiOutlineMail className="icon" />
+              </a>
+            </li>
+            <li
+              className={`header_main-photo--linkedin btn_neon--light-${
+                theme === "light" ? "red" : "blue"
+              }`}
             >
-              <AiFillGithub className="icon" />
-            </a>
-          </div>
+              <a
+                href="https://www.linkedin.com/in/bryan-teves-freitas-6674ba233/"
+                target={"_blank"}
+                rel="noreferrer"
+              >
+                <AiFillLinkedin className="icon" />
+              </a>
+            </li>
+            <li
+              className={`header_main-photo--github btn_neon--light-${
+                theme === "light" ? "red" : "blue"
+              }`}
+            >
+              <a
+                href="https://github.com/BryanTeves"
+                target={"_blank"}
+                rel="noreferrer"
+              >
+                <AiFillGithub className="icon" />
+              </a>
+            </li>
+          </ul>
         </div>
         <div
           className={`header_main-text text-shadow--${

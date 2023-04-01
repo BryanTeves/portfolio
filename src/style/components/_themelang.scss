@@ -49,8 +49,9 @@
     left: 2%;
     border-radius: 50px;
     padding: 1rem;
-    z-index: 1000;
+    z-index: 1000000;
     width: fit-content;
+    cursor: pointer;
 
     &-options {
       height: 100dvh;

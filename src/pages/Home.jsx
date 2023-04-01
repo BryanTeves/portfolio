@@ -27,12 +27,12 @@ function Home() {
   }, []);
   // This observer is used to make some animations
 
-  const actualWidth = window.screen.width;
+  const actualWidth = window.innerWidth;
 
   const [size, setSize] = useState(actualWidth);
 
   window.addEventListener("resize", function () {
-    let resizedWidth = this.window.screen.width;
+    let resizedWidth = this.window.innerWidth;
     setSize(resizedWidth);
   });
   // This block of code is uesed to make the function that will allow the menu work on mobile screens
