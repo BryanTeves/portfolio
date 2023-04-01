@@ -1,8 +1,16 @@
 .experience {
   text-align: center;
-  height: calc(70vh - 12rem);
+  height: calc(70dvh - 12rem);
+
+  @media only screen and (max-width: $medium-size) {
+    height: max-content;
+  }
+
   padding: 8rem;
   box-sizing: border-box;
+  @media only screen and (max-width: $small-size) {
+    padding: 6rem;
+  }
 
   &_last {
     width: 80%;
@@ -25,5 +33,12 @@
 
   &_other {
     margin-top: 8rem;
+    @media only screen and (max-width: $medium-size) {
+      margin-top: 4rem;
+    }
+
+    @media only screen and (max-width: $small-size) {
+      margin-top: 4rem;
+    }
   }
 }

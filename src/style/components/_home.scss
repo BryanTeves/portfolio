@@ -4,6 +4,7 @@
   @media only screen and (max-width: $large-size) {
     grid-template-rows: 16rem repeat(3, 60rem);
   }
+
   grid-template-columns: repeat(5, 1fr);
   grid-gap: 2rem;
 
@@ -15,6 +16,7 @@
   &-title {
     text-transform: uppercase;
     align-items: center;
+    text-align: center;
   }
 
   &_info {
@@ -38,6 +40,15 @@
       grid-gap: 2rem;
 
       padding: 2rem;
+    }
+
+    @media only screen and (max-width: $small-size) {
+      grid-template-rows: 26rem 12rem 6rem;
+    }
+
+    @media only screen and (max-width: $minimum-size) {
+      grid-template-rows: 20rem 12rem 6rem;
+      padding: 8rem;
     }
 
     &--text {
@@ -83,16 +94,23 @@
         margin: auto;
       }
 
+      @media only screen and (max-width: $small-size) {
+        height: 18rem;
+        width: 36rem;
+      }
+
+      @media only screen and (max-width: $minimum-size) {
+        width: 30rem;
+        height: 14rem;
+      }
+
       @include border-radius-basic();
 
       &--img {
         height: 100%;
         width: 100%;
         transition: all 2s linear;
-        @include border-radius-basic();
-
-        @media only screen and (max-width: $large-size) {
-        }
+        border-radius: 15px;
       }
 
       &--right {

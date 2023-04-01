@@ -2,6 +2,8 @@ $largest-size: 103.125em; //1650px
 $large-size: 75em; //1200px
 $big-size: 56.25em; //900px
 $medium-size: 50em; //800px
+$small-size: 37.5em; //600px
+$minimum-size: 25em; //400px
 
 :root {
   --dark-gray: rgb(38, 38, 38);
@@ -30,6 +32,10 @@ html {
 
   @media only screen and (max-width: $largest-size) {
     font-size: 50%;
+  }
+
+  @media only screen and (max-width: $big-size) {
+    font-size: 40%;
   }
 }
 

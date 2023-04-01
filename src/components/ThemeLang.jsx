@@ -55,8 +55,8 @@ function ThemeLang() {
   const [size, setSize] = useState(actualWidth);
 
   window.addEventListener("resize", function () {
-    let a = this.window.screen.width;
-    setSize(a);
+    let resizedWidth = this.window.screen.width;
+    setSize(resizedWidth);
   });
 
   const [showMenu, setShowMenu] = useState(false);
@@ -74,7 +74,9 @@ function ThemeLang() {
             onClick={handleClick}
             data-btn="menu-open"
           >
-            <AiOutlineMenu className="icon" data-btn="menu-open" />
+            <div data-btn="menu-close">
+              <AiOutlineMenu className="icon" data-btn="menu-open" />
+            </div>
           </div>
           <div
             className={`${!showMenu ? "no-show" : "theme-lang_menu-options"} ${
@@ -90,7 +92,9 @@ function ThemeLang() {
               onClick={handleClick}
               data-btn="menu-close"
             >
-              <AiOutlineClose className="icon" data-btn="menu-close" />
+              <div data-btn="menu-close">
+                <AiOutlineClose className="icon" data-btn="menu-close" />
+              </div>
             </div>
             {location.pathname !== "/home" ? (
               <div

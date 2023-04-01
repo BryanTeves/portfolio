@@ -27,13 +27,39 @@ function Home() {
   }, []);
   // This observer is used to make some animations
 
+  const actualWidth = window.screen.width;
+
+  const [size, setSize] = useState(actualWidth);
+
+  window.addEventListener("resize", function () {
+    let resizedWidth = this.window.screen.width;
+    setSize(resizedWidth);
+  });
+  // This block of code is uesed to make the function that will allow the menu work on mobile screens
+
   return (
     <>
-      <div ref={observeREF} className={`${visible ? "show-basic" : "hidden"}`}>
-        <ThemeLang />
-        <Header />
-        <DropdownBTN />
-      </div>
+      {size > 800 ? (
+        <div
+          ref={observeREF}
+          className={`${visible ? "show-basic" : "hidden"}`}
+        >
+          <ThemeLang />
+          <Header />
+          <DropdownBTN />
+        </div>
+      ) : (
+        <>
+          <ThemeLang />
+          <div
+            ref={observeREF}
+            className={`${visible ? "show-basic" : "hidden"}`}
+          >
+            <Header />
+            <DropdownBTN />
+          </div>
+        </>
+      )}
       <MainContent />
       <Footer />
     </>

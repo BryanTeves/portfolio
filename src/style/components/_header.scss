@@ -3,7 +3,7 @@
   position: relative;
 
   @media only screen and (max-width: $large-size) {
-    height: 90dvh;
+    height: max-content;
   }
 
   @include show-border();
@@ -12,7 +12,6 @@
     position: relative;
     display: grid;
     grid-template-columns: 2fr 4fr;
-    height: 100%;
 
     @media only screen and (max-width: $large-size) {
       grid-template-columns: 1fr;
@@ -47,7 +46,11 @@
         @media only screen and (max-width: $large-size) {
           animation-play-state: paused;
           position: absolute;
-          top: 130%;
+          top: 150%;
+        }
+        @media only screen and (max-width: $medium-size) {
+          top: 135%;
+          left: 35%;
         }
       }
 
@@ -56,8 +59,12 @@
         @media only screen and (max-width: $large-size) {
           animation-play-state: paused;
           position: absolute;
-          top: 130%;
+          top: 150%;
           left: 110%;
+        }
+        @media only screen and (max-width: $medium-size) {
+          top: 135%;
+          left: 90%;
         }
       }
 
@@ -66,7 +73,10 @@
         @media only screen and (max-width: $large-size) {
           animation-play-state: paused;
           position: absolute;
-          top: 130%;
+          top: 150%;
+        }
+        @media only screen and (max-width: $medium-size) {
+          top: 135%;
         }
       }
     }
@@ -79,6 +89,14 @@
       letter-spacing: 0.4rem;
       @media only screen and (max-width: $large-size) {
         margin-top: 6rem;
+      }
+      @media only screen and (max-width: $medium-size) {
+        margin-top: 10rem;
+        margin-bottom: 4rem;
+        padding: 4rem;
+      }
+      @media only screen and (max-width: $small-size) {
+        padding: 2rem;
       }
 
       & p:not(:last-child) {

@@ -6,6 +6,7 @@
     justify-content: center;
     align-items: center;
     grid-template-rows: repeat(20, 1fr);
+    text-align: center;
 
     &-btn {
       &::after {
@@ -72,6 +73,7 @@
 .sub-intro {
   @include center();
   position: relative;
+  text-align: center;
 
   &_go-back {
     position: absolute;
@@ -127,6 +129,9 @@
         position: absolute;
         left: 115%;
         bottom: 25%;
+        @media only screen and (max-width: $minimum-size) {
+          left: 108%;
+        }
       }
 
       &-btn {
@@ -141,6 +146,10 @@
         &:hover::after,
         &:hover::before {
           opacity: 1;
+        }
+
+        @media only screen and (max-width: $minimum-size) {
+          width: max-content;
         }
       }
 

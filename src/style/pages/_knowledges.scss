@@ -8,6 +8,15 @@
     grid-template-columns: 2fr 5fr 2fr;
   }
 
+  @media only screen and (max-width: $medium-size) {
+    grid-template-rows: repeat(3, 34rem) 16rem;
+    grid-template-columns: 1fr 6fr 1fr;
+  }
+
+  @media only screen and (max-width: $small-size) {
+    grid-template-columns: 1fr 6fr 1fr;
+  }
+
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -16,6 +25,7 @@
 
   & h2 {
     text-transform: uppercase;
+    margin: 1rem 0;
   }
 
   &_advanced {
@@ -34,6 +44,13 @@
     @include border-radius-basic();
 
     height: 16rem;
+    @media only screen and (max-width: $medium-size) {
+      height: 12rem;
+    }
+    @media only screen and (max-width: $small-size) {
+      height: 6rem;
+    }
+
     margin-top: 1rem;
     display: flex;
     justify-content: center;
