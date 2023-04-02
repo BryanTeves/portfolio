@@ -86,6 +86,10 @@ ul {
   transform: perspective(5em) rotateX(40deg);
   filter: blur(4px);
   transition: all 1s linear;
+
+  @media only screen and (max-width: $small-size) {
+    transform: perspective(8em) rotateX(50deg);
+  }
 }
 
 @mixin before-ground-btn() {
@@ -98,6 +102,10 @@ ul {
   height: 100%;
   transform: perspective(7em) rotateX(80deg);
   transition: all 1s linear;
+
+  @media only screen and (max-width: $small-size) {
+    transform: perspective(9em) rotateX(80deg);
+  }
 }
 
 @mixin intro-btn() {
