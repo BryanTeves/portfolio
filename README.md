@@ -4,7 +4,7 @@
 
 ### Estrutura do código
 
-Utilizei React juntamente de SASS para fazer todo o site. Utilizei a biblioteca json-server para armazenar todos os projetos que fiz, o motivo principal da qual a utilizei foi para manutenção futura, uma vez que alterando poucas linhas eu já consigo atualizar a página de projetos como um todo.
+Utilizei React juntamente de SASS para fazer todo o site. Utilizei um React Context para armazenar todos os projetos que fiz, o motivo principal da qual a utilizei foi para manutenção futura, uma vez que alterando poucas linhas eu já consigo atualizar a página de projetos como um todo.
 
 ### Design
 
@@ -22,7 +22,7 @@ Como eu sou nativo brasileiro e tenho um inglês praticamente fluente, decidi de
 
 ### Code structure
 
-I used React together with SASS to make the whole site. I used the json-server library to store all my projects datas, didi it with the main objective in maintenance, since once I change just a few lines, I can update the whole projects page all at once.
+I used React together with SASS to make the whole site. I used a React Context to store all my projects datas, didi it with the main objective in maintenance, since once I change just a few lines, I can update the whole projects page all at once.
 
 ### Design
 
