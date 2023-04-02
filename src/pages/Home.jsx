@@ -47,6 +47,8 @@ function Home() {
           <ThemeLang />
           <Header />
           <DropdownBTN />
+          <MainContent />
+          <Footer />
         </div>
       ) : (
         <>
@@ -57,11 +59,11 @@ function Home() {
           >
             <Header />
             <DropdownBTN />
+            <MainContent />
+            <Footer />
           </div>
         </>
       )}
-      <MainContent />
-      <Footer />
     </>
   );
 }
