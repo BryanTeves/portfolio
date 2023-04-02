@@ -2,7 +2,7 @@ import React from "react";
 
 import { useLocation, useNavigate } from "react-router-dom";
 
-import { useState, useRef } from "react";
+import { useState } from "react";
 
 import { GiBrazilFlag } from "react-icons/gi";
 import { FaFlagUsa } from "react-icons/fa";
