@@ -17,7 +17,11 @@ function DropdownBTN() {
   const handleClick = function () {
     const value = window.innerHeight;
 
-    window.scrollTo(0, value);
+    window.scrollTo({
+      top: value,
+      left: 0,
+      behavior: "smooth",
+    });
   };
   // This function change the current position of the site
 

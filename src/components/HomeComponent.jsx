@@ -20,6 +20,7 @@ function HomeComponent({ eng, ptbr, side, param, text, img, alt }) {
 
   const handleClick = function () {
     Navigate(param, { state: { theme: actualTheme, language: actualLangue } });
+    window.scrollTo(0, 0);
   };
   // This function make the user navigate to another site URL
 
