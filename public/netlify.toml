@@ -1,8 +1,0 @@
-[[redirects]]
-  from = "/homea"
-  to = "/home"
-  status = 200
-
-[[redirects]]
-  from = "/projects"
-  to = "/projects"
