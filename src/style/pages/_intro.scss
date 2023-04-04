@@ -9,6 +9,10 @@
     text-align: center;
 
     &-btn {
+      @media only screen and (max-width: $minimum-size) {
+        width: 12rem;
+      }
+
       &::after {
         @include after-ground-btn();
       }
@@ -29,7 +33,7 @@
       transition: all 1s linear;
 
       @media only screen and (max-width: $big-size) {
-        bottom: 15%;
+        bottom: 8%;
         right: 50%;
         transform: translateX(50%);
       }
@@ -80,9 +84,11 @@
     left: 4%;
 
     @media only screen and (max-width: $big-size) {
-      top: 10%;
+      top: 8%;
       left: 50%;
       transform: translateX(-50%);
+    }
+    @media only screen and (max-width: $small-size) {
     }
 
     &-btn {
@@ -129,8 +135,9 @@
         position: absolute;
         left: 115%;
         bottom: 25%;
+
         @media only screen and (max-width: $minimum-size) {
-          left: 108%;
+          left: 112%;
         }
       }
 
@@ -149,7 +156,7 @@
         }
 
         @media only screen and (max-width: $minimum-size) {
-          width: max-content;
+          width: 10rem;
         }
       }
 
@@ -168,6 +175,10 @@
       bottom: 15%;
       right: 50%;
       transform: translateX(50%);
+    }
+
+    @media only screen and (max-width: $small-size) {
+      bottom: 8%;
     }
 
     &-btn {
