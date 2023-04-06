@@ -47,7 +47,7 @@ function Intro() {
         Navigate("/home", {
           state: { theme: actualTheme, language: actualLangue },
         });
-      }, 1600); // Need to be this time because it matches with the animation time
+      }, 1300); // Need to be this time because it matches with the animation time
     } else {
       return;
     }
