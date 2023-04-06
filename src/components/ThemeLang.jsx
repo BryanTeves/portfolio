@@ -160,9 +160,7 @@ function ThemeLang() {
               className="overlay"
               data-btn="menu-close"
               onClick={handleClick}
-            >
-              oi
-            </div>
+            ></div>
           ) : (
             <span className="no-show"></span>
           )}

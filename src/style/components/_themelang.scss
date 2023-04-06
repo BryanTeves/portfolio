@@ -54,14 +54,14 @@
     cursor: pointer;
 
     &-options {
-      height: 100dvh;
+      height: 140vh;
       width: 40rem;
       position: fixed;
       z-index: 100000;
       opacity: 0.9;
       display: grid;
       grid-auto-flow: row;
-      grid-template-rows: repeat(5, 1fr);
+      grid-template-rows: repeat(6, 1fr);
       grid-template-columns: 1fr;
       padding: 4rem;
       box-sizing: border-box;
