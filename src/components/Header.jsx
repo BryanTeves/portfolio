@@ -79,8 +79,8 @@ function Header() {
         >
           <p>
             {language === "br"
-              ? `Meu nome é Bryan, tenho ${age} anos, faço faculdade e amo programar, principalmente quando se trata de FrontEnd. Eu já fiz VÁRIOS cursos e projetos para me especializar, e sempre procuro por mais aprendizado!`
-              : `My name is Bryan, I'm ${age} years old, currently studying at the college and with a passion to program, especially when it comes to FrontEnd. I've taken MANY courses and did a LOT of projects to specialize myself, and I'm always looking for more lessons, to learn!`}
+              ? `Meu nome é Bryan, tenho ${age} anos, faço faculdade de Análise e Desenvolvimento de Sistemas na UNIP e amo programar, principalmente quando se trata de FrontEnd. Eu já fiz VÁRIOS cursos e projetos para me especializar, e sempre procuro por mais aprendizado!`
+              : `My name is Bryan, I'm ${age} years old, currently studying Analysis and Systems Development at the college and with a passion to program, especially when it comes to FrontEnd. I've taken MANY courses and did a LOT of projects to specialize myself, and I'm always looking for more lessons, to learn!`}
           </p>
 
           <p>
