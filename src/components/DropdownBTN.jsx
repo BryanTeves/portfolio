@@ -15,10 +15,10 @@ function DropdownBTN() {
   }
 
   const handleClick = function () {
-    const value = window.innerHeight;
+    const scrollPosition = window.innerHeight;
 
     window.scrollTo({
-      top: value,
+      top: scrollPosition,
       left: 0,
       behavior: "smooth",
     });

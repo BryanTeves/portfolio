@@ -1,5 +1,7 @@
 import React from "react";
 
+import PropTypes from "prop-types";
+
 import { useLocation } from "react-router-dom";
 
 function Works({ jobTitle, jobStart, jobEnd, jobDescription }) {
@@ -30,5 +32,13 @@ function Works({ jobTitle, jobStart, jobEnd, jobDescription }) {
     </div>
   );
 }
+
+Works.propTypes = {
+  title: PropTypes.string.isRequired,
+  start: PropTypes.string.isRequired,
+  end: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  theme: PropTypes.oneOf(["light", "dark"]).isRequired,
+};
 
 export default Works;

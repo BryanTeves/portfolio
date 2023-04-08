@@ -64,16 +64,6 @@ ul {
   border-radius: 1.5rem;
 }
 
-@mixin center() {
-  height: 100vh;
-  width: 100vw;
-  display: grid;
-  justify-content: center;
-  align-items: center;
-  letter-spacing: 0.8rem;
-  font-size: 1.4rem;
-}
-
 @mixin after-ground-btn() {
   opacity: 0;
   content: "";
@@ -125,6 +115,16 @@ ul {
   transform: perspective(5em) rotateY(-40deg);
   filter: blur(4px);
   transition: all 1s linear;
+}
+
+@mixin center() {
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 0.8rem;
+  font-size: 1.4rem;
 }
 
 @mixin rotate-animation($value) {

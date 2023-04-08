@@ -1,15 +1,14 @@
 .experience {
   text-align: center;
   height: calc(70dvh - 12rem);
+  padding: 8rem;
+  box-sizing: border-box;
 
   @media only screen and (max-width: $medium-size) {
     height: max-content;
   }
-
-  padding: 8rem;
-  box-sizing: border-box;
   @media only screen and (max-width: $small-size) {
-    padding: 6rem;
+    padding: 8rem 6rem;
   }
 
   &_last {

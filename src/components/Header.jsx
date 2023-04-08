@@ -4,6 +4,8 @@ import { AiFillLinkedin, AiFillGithub, AiOutlineMail } from "react-icons/ai";
 
 import { useLocation } from "react-router-dom";
 
+import { useEffect, useState } from "react";
+
 import CV from "../docs/bryan-teves-cv.pdf";
 
 function Header() {
@@ -17,14 +19,18 @@ function Header() {
     language = "eng";
   }
 
-  const date = new Date();
-  const born = new Date(2002, 1, 22);
+  const [age, setAge] = useState(null);
 
-  const monthDifference = date - born.getTime();
+  useEffect(() => {
+    const date = new Date();
+    const born = new Date(2002, 1, 22);
 
-  const ageDate = new Date(monthDifference);
+    const monthDifference = date - born.getTime();
 
-  let age = Math.abs(ageDate.getUTCFullYear() - 1970);
+    const ageDate = new Date(monthDifference);
+
+    setAge(Math.abs(ageDate.getUTCFullYear() - 1970));
+  }, []);
 
   // The block of code above calculate my actual age
 

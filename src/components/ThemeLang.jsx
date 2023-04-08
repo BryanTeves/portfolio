@@ -2,7 +2,7 @@ import React from "react";
 
 import { useLocation, useNavigate } from "react-router-dom";
 
-import { useState } from "react";
+import { useState, useEffect, useCallback } from "react";
 
 import { GiBrazilFlag } from "react-icons/gi";
 import { FaFlagUsa } from "react-icons/fa";
@@ -49,18 +49,23 @@ function ThemeLang() {
   const location = useLocation();
   // This const is used to verify if the user is in the home page, to show or not the home button
 
-  // const phoneSize = window.matchMedia("(max-width: 50em)").matches; // 50em == 800px
+  const handleResize = useCallback(() => {
+    setSize(window.innerWidth);
+  }, []);
+  // this callback is used to make the resize cleaner
 
-  const actualWidth = window.innerWidth;
+  const [size, setSize] = useState(window.innerWidth);
 
-  const [size, setSize] = useState(actualWidth);
+  useEffect(() => {
+    window.addEventListener("resize", handleResize);
 
-  window.addEventListener("resize", function () {
-    let resizedWidth = this.window.innerWidth;
-    setSize(resizedWidth);
-  });
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, [handleResize]);
 
   const [showMenu, setShowMenu] = useState(false);
+  // The above block of code is used to test if the page is on width enough to show the menu in phone state or PC state
 
   return (
     <>

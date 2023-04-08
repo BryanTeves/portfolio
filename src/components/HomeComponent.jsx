@@ -1,5 +1,7 @@
 import React from "react";
 
+import PropTypes from "prop-types";
+
 import { useNavigate, useLocation } from "react-router-dom";
 
 import { useEffect, useRef, useState } from "react";
@@ -75,5 +77,15 @@ function HomeComponent({ eng, ptbr, side, param, text, img, alt }) {
     </div>
   );
 }
+
+HomeComponent.propTypes = {
+  eng: PropTypes.string.isRequired,
+  ptbr: PropTypes.string.isRequired,
+  side: PropTypes.oneOf(["left", "right"]).isRequired,
+  param: PropTypes.string.isRequired,
+  text: PropTypes.string.isRequired,
+  img: PropTypes.string.isRequired,
+  alt: PropTypes.string.isRequired,
+};
 
 export default HomeComponent;
