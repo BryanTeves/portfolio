@@ -128,7 +128,6 @@ function Intro() {
                       : "btn_neon--light-blue"
                   }`}
                   data-btn="br"
-                  tabIndex={1}
                 >
                   Português BR
                 </button>
@@ -142,7 +141,6 @@ function Intro() {
                       : "btn_neon--light-blue"
                   }`}
                   data-btn="eng"
-                  tabIndex={2}
                 >
                   English USA
                 </button>
@@ -162,7 +160,6 @@ function Intro() {
                     ? "btn_neon--light-red"
                     : "btn_neon--light-blue"
                 }`}
-                tabIndex={3}
               >
                 {actualLangue === "br" ? "Continuar" : "Continue"}
 
@@ -186,7 +183,6 @@ function Intro() {
                 : "btn_neon--light-blue"
             } sub-intro_go-back-btn`}
             onClick={goLeft}
-            tabIndex={5}
           >
             <BsArrowLeft className="icon sub-intro_go-back-icon" />
 
@@ -216,7 +212,6 @@ function Intro() {
                       : "btn_neon--light-blue"
                   } sub-intro_main-list-btn`}
                   data-btn="dark"
-                  tabIndex={3}
                 >
                   <HiMoon className="icon icon-moon sub-intro_main-list-icon" />
 
@@ -234,7 +229,6 @@ function Intro() {
                       : "btn_neon--light-blue"
                   } sub-intro_main-list-btn`}
                   data-btn="light"
-                  tabIndex={4}
                 >
                   <HiSun className="icon icon-moon sub-intro_main-list-icon" />
 
