@@ -1,5 +1,8 @@
 import { createContext } from "react";
 
+import colorGenerator from "../images/color-generator.jpg";
+import leagueWiki from "../images/league-wiki.jpg";
+
 const ProjectsContext = createContext();
 
 export const ProjectsProvider = function ({ children }) {
@@ -9,7 +12,7 @@ export const ProjectsProvider = function ({ children }) {
       name: "color-generator",
       github: "https://github.com/BryanTeves/color-generator",
       site: "https://colorgenerator-bryan-teves.netlify.app/",
-      img: "https://i.imgur.com/d6RCqTC.jpg",
+      img: colorGenerator,
       description:
         "I have made this project to test my JavaScript skills. I used only JS, without any framework. The main function of the color generator, like the name says, is to generate colors, beside that, you can put your own color and even copy the RGB code from the colors",
       descricao:
@@ -21,7 +24,7 @@ export const ProjectsProvider = function ({ children }) {
       name: "league-wiki",
       github: "https://github.com/BryanTeves/league-wiki",
       site: "https://lol-wiki-bryan-teves.netlify.app/",
-      img: "https://i.imgur.com/SwSGNsN.jpg",
+      img: leagueWiki,
       description:
         'This was my first React project. When I finished my React course, I realized that React is so GREAT to work with. With that in mind, I mixed up tow of my passions, games and program, so I thought "Why not make a League of legends wiki?", and it\'s how this project came alive. The main concept of the league-wiki is to bring all the infos of all the champions of League of Legends. I used React, Sass and the RIOT API (DataDragon) to bring this project out of paper',
       descricao:

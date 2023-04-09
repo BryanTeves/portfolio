@@ -4,9 +4,9 @@ import { useLocation } from "react-router-dom";
 
 import HomeComponent from "./HomeComponent";
 
-import projectsIMG from "../images/projects.webp";
-import knowledgesIMG from "../images/knowledges.webp";
-import experienceIMG from "../images/experience.webp";
+import projectsIMG from "../images/projects.jpg";
+import knowledgesIMG from "../images/knowledges.jpg";
+import experienceIMG from "../images/experience.jpg";
 
 function MainContent() {
   const { state } = useLocation();
