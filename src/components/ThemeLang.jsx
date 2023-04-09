@@ -211,7 +211,7 @@ function ThemeLang() {
           ) : (
             <span className="theme-lang-div"></span>
           )}
-          <div className="theme-lang-div">
+          <div className="theme-lang-div end">
             <HiMoon
               className={`icon ${
                 theme === "light" ? "hidden-basic-2" : "show-basic-2"

@@ -4,6 +4,7 @@ $big-size: 56.25em; //900px
 $medium-size: 50em; //800px
 $small-size: 37.5em; //600px
 $minimum-size: 25em; //400px
+$minimal-size: 18.75em; //300px
 
 :root {
   --dark-gray: rgb(38, 38, 38);
@@ -28,6 +29,8 @@ $minimum-size: 25em; //400px
 }
 
 html {
+  font-family: "Roboto Mono", monospace;
+
   font-size: 62.5%; // 10px
 
   @media only screen and (max-width: $largest-size) {

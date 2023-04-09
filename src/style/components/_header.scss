@@ -17,6 +17,12 @@
       grid-template-columns: 1fr;
       grid-template-rows: 1fr 2fr;
     }
+    @media only screen and (max-width: $minimum-size) {
+      grid-template-rows: 1fr 2.5fr;
+    }
+    @media only screen and (max-width: $minimal-size) {
+      grid-template-rows: 1fr 3fr;
+    }
 
     // I found the rotate animation in some website (sad I have no clue who made it D=), I just changed some lines and added other 2 spheres to rotate together
     &-photo {
@@ -48,6 +54,9 @@
           position: absolute;
           top: 150%;
         }
+        @media only screen and (max-width: $big-size) {
+          left: 55%;
+        }
         @media only screen and (max-width: $medium-size) {
           top: 135%;
           left: 70%;
@@ -61,6 +70,9 @@
           position: absolute;
           top: 150%;
           left: 110%;
+        }
+        @media only screen and (max-width: $big-size) {
+          left: 95%;
         }
         @media only screen and (max-width: $medium-size) {
           top: 135%;

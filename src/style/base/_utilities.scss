@@ -45,6 +45,8 @@
 }
 
 .btn {
+  font-family: inherit;
+
   background-color: inherit;
   padding: 2rem;
   border: none;
@@ -285,4 +287,8 @@
   height: 100vh;
   width: 100%;
   z-index: 100;
+}
+
+.end {
+  justify-content: end;
 }

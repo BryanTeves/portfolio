@@ -1,7 +1,7 @@
 .theme-lang {
   display: grid;
   grid-auto-flow: column;
-  grid-template-columns: 30rem 10rem 30rem;
+  grid-template-columns: 36rem 10rem 36rem;
   justify-content: space-between;
   align-items: center;
   height: 12rem;
@@ -33,7 +33,7 @@
     }
 
     &--btn {
-      width: 20rem;
+      width: 22rem;
       z-index: 1000000000000;
     }
 

@@ -46,9 +46,9 @@ function HomeComponent({ eng, ptbr, side, param, text, img, alt }) {
       } ${!visible ? `go-${side}` : side}`}
       ref={divREF}
     >
-      <div>
+      <div className="home_component-div--btn">
         <button
-          className={`btn btn_neon--light-${
+          className={`home_component-btn btn btn_neon--light-${
             actualTheme === "light" ? "red" : "blue"
           }`}
           onClick={handleClick}

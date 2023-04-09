@@ -47,8 +47,16 @@
     }
 
     @media only screen and (max-width: $minimum-size) {
-      grid-template-rows: 20rem 12rem 6rem;
+      grid-template-rows: 20rem 16rem 6rem;
       padding: 8rem;
+    }
+
+    &-btn {
+      width: 17rem;
+
+      @media only screen and (max-width: $large-size) {
+        width: fit-content;
+      }
     }
 
     &--text {

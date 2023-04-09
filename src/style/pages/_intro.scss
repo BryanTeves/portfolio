@@ -44,6 +44,7 @@
 
       &-btn {
         @include intro-btn();
+        width: 16rem;
 
         &::after {
           @include after-left-btn();
@@ -95,6 +96,7 @@
 
     &-btn {
       @include intro-btn();
+      width: 16rem;
 
       &::after {
         opacity: 0;
@@ -185,6 +187,7 @@
 
     &-btn {
       @include intro-btn();
+      width: 16rem;
 
       &::after {
         @include after-left-btn();
