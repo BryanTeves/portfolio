@@ -7,6 +7,7 @@ import Intro from "./pages/Intro";
 import Projects from "./pages/Projects";
 import Knowledges from "./pages/Knowledges";
 import Experience from "./pages/Experience";
+import NotFound from "./pages/NotFound";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route element={<Projects />} path="/projects" />
           <Route element={<Knowledges />} path="/knowledges" />
           <Route element={<Experience />} path="/experience" />
+          <Route element={<NotFound />} path="/*" />
         </Routes>
       </BrowserRouter>
     </ProjectsProvider>
