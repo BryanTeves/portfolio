@@ -1,8 +1,9 @@
 .experience {
   text-align: center;
-  height: calc(70dvh - 12rem);
+  height: 70vh;
   padding: 8rem;
   box-sizing: border-box;
+  display: grid;
 
   @media only screen and (max-width: $medium-size) {
     height: max-content;
