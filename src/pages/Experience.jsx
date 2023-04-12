@@ -51,7 +51,7 @@ function Experience() {
             jobEnd={language === "br" ? "Atualmente" : "Currently at work"}
             jobDescription={
               language === "br"
-                ? "Eu atuo como suporte online para pequenas e médias empresas, utilizo muitos Sistemas de Informação Gerencial, principalmente CRM (Customer Relationship Management) para prestar o devivo atendimento ao cliente - maior foco em problemas relacionados a conexão de internet"
+                ? "Eu atuo como suporte online para pequenas e médias empresas, utilizo muitos Sistemas de Informação Gerencial, principalmente CRM (Customer Relationship Management) para prestar o devido atendimento ao cliente - maior foco em problemas relacionados a conexão de internet"
                 : "I do online services to small and medium enterprises, I use a lot of CRM (Customer Relationship Management) systems to help out the job - my main focus on the job is to help in internet connection related problems"
             }
           />
