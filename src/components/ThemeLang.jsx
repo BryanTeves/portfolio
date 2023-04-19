@@ -67,6 +67,52 @@ function ThemeLang() {
   const [showMenu, setShowMenu] = useState(false);
   // The above block of code is used to test if the page is on width enough to show the menu in phone state or PC state
 
+  const languageComponent = (
+    <>
+      <GiBrazilFlag
+        className={`icon ${
+          language === "eng" ? "hidden-basic-2" : "show-basic-2"
+        }`}
+      />
+      <button
+        data-btn="language"
+        className={`theme-lang-div--btn btn btn_neon--light-${
+          theme === "dark" ? "blue" : "red"
+        }`}
+      >
+        {language === "br" ? "Alterar o idioma" : "Change the language"}
+      </button>
+      <FaFlagUsa
+        className={`icon ${
+          language === "br" ? "hidden-basic-2" : "show-basic-2"
+        }`}
+      />
+    </>
+  );
+
+  const themeComponent = (
+    <>
+      <HiMoon
+        className={`icon ${
+          theme === "light" ? "hidden-basic-2" : "show-basic-2"
+        }`}
+      />
+      <button
+        data-btn="theme"
+        className={`theme-lang-div--btn btn btn_neon--light-${
+          theme === "dark" ? "blue" : "red"
+        }`}
+      >
+        {language === "br" ? "Mudar o tema" : "Change theme"}
+      </button>
+      <HiSun
+        className={`icon ${
+          theme === "dark" ? "hidden-basic-2" : "show-basic-2"
+        }`}
+      />
+    </>
+  );
+
   return (
     <>
       {size <= 800 ? (
@@ -80,7 +126,7 @@ function ThemeLang() {
             onClick={handleClick}
             data-btn="menu-open"
           >
-            <div data-btn="menu-close">
+            <div data-btn="menu-open">
               <AiOutlineMenu className="icon" data-btn="menu-open" />
             </div>
           </div>
@@ -120,44 +166,10 @@ function ThemeLang() {
               <span className="no-show"></span>
             )}
             <div className="theme-lang_menu-options--div" onClick={handleClick}>
-              <GiBrazilFlag
-                className={`icon ${
-                  language === "eng" ? "hidden-basic-2" : "show-basic-2"
-                }`}
-              />
-              <button
-                data-btn="language"
-                className={`theme-lang-div--btn btn btn_neon--light-${
-                  theme === "dark" ? "blue" : "red"
-                }`}
-              >
-                {language === "br" ? "Alterar o idioma" : "Change the language"}
-              </button>
-              <FaFlagUsa
-                className={`icon ${
-                  language === "br" ? "hidden-basic-2" : "show-basic-2"
-                }`}
-              />
+              {languageComponent}
             </div>
             <div className="theme-lang_menu-options--div" onClick={handleClick}>
-              <HiMoon
-                className={`icon ${
-                  theme === "light" ? "hidden-basic-2" : "show-basic-2"
-                }`}
-              />
-              <button
-                data-btn="theme"
-                className={`theme-lang-div--btn btn btn_neon--light-${
-                  theme === "dark" ? "blue" : "red"
-                }`}
-              >
-                {language === "br" ? "Mudar o tema" : "Change theme"}
-              </button>
-              <HiSun
-                className={`icon ${
-                  theme === "dark" ? "hidden-basic-2" : "show-basic-2"
-                }`}
-              />
+              {themeComponent}
             </div>
           </div>
           {showMenu ? (
@@ -177,26 +189,7 @@ function ThemeLang() {
           } theme-lang`}
           onClick={handleClick}
         >
-          <div className="theme-lang-div">
-            <GiBrazilFlag
-              className={`icon ${
-                language === "eng" ? "hidden-basic-2" : "show-basic-2"
-              }`}
-            />
-            <button
-              data-btn="language"
-              className={`theme-lang-div--btn btn btn_neon--light-${
-                theme === "dark" ? "blue" : "red"
-              }`}
-            >
-              {language === "br" ? "Alterar o idioma" : "Change the language"}
-            </button>
-            <FaFlagUsa
-              className={`icon ${
-                language === "br" ? "hidden-basic-2" : "show-basic-2"
-              }`}
-            />
-          </div>
+          <div className="theme-lang-div">{languageComponent}</div>
           {location.pathname !== "/home" ? (
             <div className="theme-lang-div">
               <button
@@ -211,26 +204,7 @@ function ThemeLang() {
           ) : (
             <span className="theme-lang-div"></span>
           )}
-          <div className="theme-lang-div end">
-            <HiMoon
-              className={`icon ${
-                theme === "light" ? "hidden-basic-2" : "show-basic-2"
-              }`}
-            />
-            <button
-              data-btn="theme"
-              className={`theme-lang-div--btn btn btn_neon--light-${
-                theme === "dark" ? "blue" : "red"
-              }`}
-            >
-              {language === "br" ? "Mudar o tema" : "Change theme"}
-            </button>
-            <HiSun
-              className={`icon ${
-                theme === "dark" ? "hidden-basic-2" : "show-basic-2"
-              }`}
-            />
-          </div>
+          <div className="theme-lang-div end">{themeComponent}</div>
         </div>
       )}
     </>
